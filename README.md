@@ -1,7 +1,7 @@
 # Synctool
 Command line tool that sync files and folders recursively
 
-[![License](http://img.shields.io/:license-mit-blue.svg)](http://gep13.mit-license.org) [![NuGet version (FFmpeg-Fluent)](https://img.shields.io/nuget/v/ffmpeg-fluent.svg?style=flat-square)](https://www.nuget.org/packages/synctool/)
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://gep13.mit-license.org) [![NuGet version (synctool)](https://img.shields.io/nuget/v/synctool.svg?style=flat-square)](https://www.nuget.org/packages/synctool/)
 
 # Usage
 
