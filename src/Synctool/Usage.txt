@@ -1,0 +1,11 @@
+Usage:
+    synctool.exe sync <source-folder> <destiny-folder> [--silent]
+    synctool.exe version
+
+Commands:
+    sync             Syncronize folders, adding, deleting and updating files
+	version          Show version
+
+Options:
+    -s, --silent     Silent mode
+    -h, --help       Show this screen

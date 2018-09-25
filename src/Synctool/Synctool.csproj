@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ToolCommandName>synctool</ToolCommandName>
+    <PackAsTool>True</PackAsTool>
+    <IsPackable>true</IsPackable>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <ApplicationIcon>synctool.ico</ApplicationIcon>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>synctool</PackageId>
+    <Authors>Jeferson Tenorio</Authors>
+    <Company>Jeferson Tenorio</Company>
+    <Product>synctool</Product>
+    <Description>Command line tool that sync files and folders recursively</Description>
+    <Copyright>Copyright © Jeferson Tenorio</Copyright>
+    <PackageLicenseUrl>https://gep13.mit-license.org/</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/jefersonsv/synctool</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/jefersonsv/synctool/raw/master/icons/favicon-96x96.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/jefersonsv/synctool.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>synctool file folder files folders syncronize</PackageTags>
+    <NeutralLanguage>English</NeutralLanguage>
+    <AssemblyName>synctool</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <Version>1.0.0</Version>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="fonts\contessa.flf" />
+    <None Remove="Usage.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Contessa.flf" />
+    <EmbeddedResource Include="Usage.txt" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Colorful.Console" Version="1.2.9" />
+    <PackageReference Include="docopt.net" Version="0.6.1.10" />
+    <PackageReference Include="Microsoft.Extensions.FileSystemGlobbing" Version="2.1.1" />
+  </ItemGroup>
+
+</Project>
