@@ -28,14 +28,15 @@ namespace Synctool
             var fontArr = ArrayHelper.GetByteArray(assembly.GetManifestResourceStream($"Synctool.Contessa.flf"));
             var usageArr = ArrayHelper.GetByteArray(assembly.GetManifestResourceStream($"Synctool.Usage.txt"));
 
-            FigletFont font = FigletFont.Load(fontArr);
-            Figlet figlet = new Figlet(font);
-            PrintHelper.Print(figlet.ToAscii("Synctool"), Color.Blue);
-            PrintHelper.PrintLine("Command line tool that sync files and folders recursively" + Environment.NewLine, Color.White);
-
             try
             {
                 var arguments = new Docopt().Apply(Encoding.Default.GetString(usageArr), args, version: "Synctool", exit: false);
+                PrintHelper.Silent = arguments["--silent"].IsTrue;
+
+                FigletFont font = FigletFont.Load(fontArr);
+                Figlet figlet = new Figlet(font);
+                PrintHelper.Print(figlet.ToAscii("Synctool"), Color.Blue);
+                PrintHelper.PrintLine("Command line tool that sync files and folders recursively" + Environment.NewLine, Color.White);
 
                 try
                 {
@@ -68,8 +69,6 @@ namespace Synctool
 
         public static void Run(string[] afterArgs, IDictionary<string, ValueObject> param)
         {
-            PrintHelper.Silent = param["--silent"].IsTrue;
-
             if (param["sync"].IsTrue)
             {
                 PrintHelper.Print(string.Empty);
@@ -99,7 +98,7 @@ namespace Synctool
                         Directory.CreateDirectory(to.DirectoryName);
 
                     PrintHelper.Print("File copied: ", Color.White);
-                    PrintHelper.Print(to.FullName, Color.Gray);
+                    PrintHelper.PrintLine(to.FullName, Color.Gray);
 
                     File.Copy(v.FileInfo.FullName, to.FullName, true);
                 }
@@ -111,7 +110,7 @@ namespace Synctool
                 foreach (var v in deleteList)
                 {
                     PrintHelper.Print("File deleted: ", Color.White);
-                    PrintHelper.Print(v.FileInfo.FullName, Color.Gray);
+                    PrintHelper.PrintLine(v.FileInfo.FullName, Color.Gray);
 
                     File.Delete(v.FileInfo.FullName);
                 }

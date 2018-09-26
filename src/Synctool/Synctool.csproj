@@ -22,9 +22,9 @@
     <PackageTags>synctool file folder files folders syncronize</PackageTags>
     <NeutralLanguage>English</NeutralLanguage>
     <AssemblyName>Synctool</AssemblyName>
-    <AssemblyVersion>1.0.0.3</AssemblyVersion>
-    <Version>1.0.3</Version>
-    <FileVersion>1.0.0.3</FileVersion>
+    <AssemblyVersion>1.0.0.4</AssemblyVersion>
+    <Version>1.0.4</Version>
+    <FileVersion>1.0.0.4</FileVersion>
     <RootNamespace>Synctool</RootNamespace>
   </PropertyGroup>
 
