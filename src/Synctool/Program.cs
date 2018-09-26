@@ -24,9 +24,9 @@ namespace Synctool
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            var assembly = Assembly.GetEntryAssembly();
-            var fontArr = ArrayHelper.GetByteArray(assembly.GetManifestResourceStream("Synctool.Contessa.flf"));
-            var usageArr = ArrayHelper.GetByteArray(assembly.GetManifestResourceStream("Synctool.Usage.txt"));
+            var assembly = Assembly.GetExecutingAssembly();
+            var fontArr = ArrayHelper.GetByteArray(assembly.GetManifestResourceStream($"Synctool.Contessa.flf"));
+            var usageArr = ArrayHelper.GetByteArray(assembly.GetManifestResourceStream($"Synctool.Usage.txt"));
 
             FigletFont font = FigletFont.Load(fontArr);
             Figlet figlet = new Figlet(font);
@@ -39,7 +39,7 @@ namespace Synctool
 
                 try
                 {
-                    Run(args, arguments).Wait();
+                    Run(args, arguments);
                     Environment.Exit(0);
                 }
                 catch (Exception ex)
@@ -66,7 +66,7 @@ namespace Synctool
             }
         }
 
-        public static async Task Run(string[] afterArgs, IDictionary<string, ValueObject> param)
+        public static void Run(string[] afterArgs, IDictionary<string, ValueObject> param)
         {
             PrintHelper.Silent = param["--silent"].IsTrue;
 

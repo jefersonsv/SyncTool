@@ -8,10 +8,10 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <ApplicationIcon>synctool.ico</ApplicationIcon>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>synctool</PackageId>
+    <PackageId>Synctool</PackageId>
     <Authors>Jeferson Tenorio</Authors>
     <Company>Jeferson Tenorio</Company>
-    <Product>synctool</Product>
+    <Product>Synctool</Product>
     <Description>Command line tool that sync files and folders recursively</Description>
     <Copyright>Copyright © Jeferson Tenorio</Copyright>
     <PackageLicenseUrl>https://gep13.mit-license.org/</PackageLicenseUrl>
@@ -21,10 +21,16 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>synctool file folder files folders syncronize</PackageTags>
     <NeutralLanguage>English</NeutralLanguage>
-    <AssemblyName>synctool</AssemblyName>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <Version>1.0.0</Version>
-    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyName>Synctool</AssemblyName>
+    <AssemblyVersion>1.0.0.3</AssemblyVersion>
+    <Version>1.0.3</Version>
+    <FileVersion>1.0.0.3</FileVersion>
+    <RootNamespace>Synctool</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
 
   <ItemGroup>

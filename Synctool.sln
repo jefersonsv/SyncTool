@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4B4173CD-011
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BB94D00C-083A-4054-AB36-321B823463BE}"
 	ProjectSection(SolutionItems) = preProject
-		..\.gitignore = ..\.gitignore
-		..\deploy-src.cmd = ..\deploy-src.cmd
-		..\LICENSE = ..\LICENSE
+		.gitignore = .gitignore
+		deploy-src.cmd = deploy-src.cmd
+		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
 EndProject
